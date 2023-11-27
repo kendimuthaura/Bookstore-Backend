@@ -4,6 +4,7 @@ using BookStore__Management_system.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookStore__Management_system.Migrations
 {
     [DbContext(typeof(BookStoreContext))]
-    partial class BookStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20231103090440_m")]
+    partial class m
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,15 +33,15 @@ namespace BookStore__Management_system.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("AccountName")
+                    b.Property<string>("AuthorName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("AccountNumber")
+                    b.Property<string>("Availability")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Status")
+                    b.Property<string>("BookName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

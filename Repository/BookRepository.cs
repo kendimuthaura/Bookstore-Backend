@@ -48,9 +48,9 @@ namespace BookStore__Management_system.Repository
     {
             var book = new Books()
             {
-                BookName = bookModel.BookName,
-                AuthorName = bookModel.AuthorName,
-                Availability = bookModel.Availability,
+               AccountName = bookModel.AccountName,
+                AccountNumber = bookModel.AccountNumber,
+                Status = bookModel.Status,
 
 
             };
@@ -73,9 +73,9 @@ namespace BookStore__Management_system.Repository
         var book = new Books()
         {
             Id = bookId,
-            BookName = bookModel.BookName,
-            AuthorName = bookModel.AuthorName,
-            Availability = bookModel.Availability,
+            AccountName = bookModel.AccountName,
+            AccountNumber = bookModel.AccountNumber,
+            Status= bookModel.Status,
 
         };
 
